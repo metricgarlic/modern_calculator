@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Calculator</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./script.js" defer></script>
+        <script src="https://kit.fontawesome.com/0f0c73dcb1.js" crossorigin="anonymous" defer></script>
+    </head>
+
+    <body>
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+            <div class="numpad" onclick="handleButtonClick(event)">
+                <input type="button" class="operator" data-value="C" value="C">
+                <input type="button" class="operator" data-value="/" value="/">
+                <input type="button" class="operator" data-value="*" value="*">
+                <input type="button" class="operator" data-value="del" value="⌫">
+                <input type="button" data-value="7" value="7">
+                <input type="button" data-value="8" value="8">
+                <input type="button" data-value="9" value="9">
+                <input type="button" class="operator" data-value="-" value="-">
+                <input type="button" data-value="4" value="4">
+                <input type="button" data-value="5" value="5">
+                <input type="button" data-value="6" value="6">
+                <input type="button" class="operator" data-value="+" value="+">
+                <input type="button" data-value="1" value="1">
+                <input type="button" data-value="2" value="2">
+                <input type="button" data-value="3" value="3">
+                <input type="button" class="equals" data-value="=" value="=">
+                <input type="button" data-value="%" value="%">
+                <input type="button" data-value="0" value="0">
+                <input type="button" data-value="." value=".">
+            </div>
+            <div class="history" id="history">
+                <h2>History:</h2>
+            </div>
+
+        </div>
+        <div class="side-buttons">
+            <button id="red" onclick="changeTheme('red')"></button>
+            <button id="yellow" onclick="changeTheme('yellow')"></button>
+            <button id="blue" onclick="changeTheme('blue')"></button>
+            <button id="green" onclick="changeTheme('green')"></button>
+            <button id="white" onclick="changeTheme('white')"></button>
+            <button id="x" onclick="toggleHistory()"><i class="fa-solid fa-clock-rotate-left"></i></button>
+        </div>
+    </body>
+
+</html>
